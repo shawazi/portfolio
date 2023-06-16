@@ -12,6 +12,7 @@
 - simple visual notification system, maybe just for "message submitted"
 - consider authentication
 
-# layout
+# layout:
 - basic routing
 - HOME | PORTFOLIO | ABOUT | CONTACT
+- does home = landing? 

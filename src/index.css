@@ -3,3 +3,32 @@
 @tailwind utilities;
 
 
+body {
+    background-image: url('./assets/space.jpg');
+    background-size: cover;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.footer .left-content {
+    float: left;
+}
+
+.footer .right-content {
+    float: right;
+}
+
+.footer .right-content address {
+    display: flex;
+}
+
+.footer .right-content address a {
+    margin-right: 10px;
+}

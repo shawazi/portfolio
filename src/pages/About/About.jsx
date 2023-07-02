@@ -1,13 +1,12 @@
 import React from 'react'
 import NavFoot from '../../components/NavFoot'
 
-const Home = () => {
+const About = () => {
   return (
     <>
-      <p>hi</p>
-      <h1>TESTING</h1>
+      <div>ABOUT</div>
     </>
-  )
+    )
 }
 
-export default Home
+export default About

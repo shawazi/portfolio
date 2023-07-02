@@ -6,6 +6,9 @@
 body {
     background-image: url('./assets/space.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .footer {

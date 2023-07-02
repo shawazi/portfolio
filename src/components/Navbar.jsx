@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 const pages = ['Home', 'Projects', 'About', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -19,22 +19,9 @@ const Logo = styled(Typography)`
   text-decoration: none;
 `;
 
-const ResponsiveLogo = styled(Typography)`
-  margin-right: ${(props) => props.theme.spacing(2)};
-  display: flex;
-  ${({ theme }) => theme.breakpoints.up('md')} {
-    display: none; /* Change to none */
-  }
-  flex-grow: 1;
-  font-family: monospace;
-  font-weight: 700;
-  letter-spacing: 0.3rem;
-  color: inherit;
-  text-decoration: none;
-`;
-
 const NavLinkButton = styled(Button)`
-  margin: ${(props) => props.theme.spacing(2)} 0;
+  margin: ${(props) => props.theme.spacing(1)} 0;
+  margin-right: 0.3rem;
   color: black;
   display: block;
   &:hover {
@@ -60,19 +47,10 @@ const NavBar = () => {
     };
   }, []);
 
-  const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -96,11 +74,13 @@ const NavBar = () => {
           </Logo>
 
           <Box sx={{ flexGrow: 1 }}>
-            <Box sx={{ display: 'flex' }}> {/* Remove the `xs` and `md` properties */}
+            <Box sx={{ display: 'flex', justifyContent: 'flex-end', flexGrow: 1 }}>  
               {pages.map((page) => (
-                <NavLinkButton key={page} onClick={handleCloseNavMenu}>
-                  {page}
-                </NavLinkButton>
+                <Link key={page} to={page === 'Home' ? '/' : `/${page.toLowerCase()}`} style={{ textDecoration: "none"}}>
+                  <NavLinkButton>
+                    {page}
+                  </NavLinkButton>
+                </Link>
               ))}
             </Box>
           </Box>
@@ -130,42 +110,6 @@ const NavBar = () => {
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-
-          {/* Mobile menu */}
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>

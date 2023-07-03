@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from '@mui/material';
 import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
+import haloImage from '../assets/halo.jpg';
+
 
 const pages = ['Home', 'Projects', 'About', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -88,7 +90,7 @@ const NavBar = () => {
           <Box>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Shawaz" src="./src/assets/halo.jpg" />
+                <Avatar alt="Shawaz" src={haloImage} />
               </IconButton>
             </Tooltip>
             <Menu

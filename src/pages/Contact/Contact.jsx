@@ -5,7 +5,8 @@ const Contact = () => {
   return (
     <>
       <div className="card">
-        <h1>Please send a message with your inquiry, offer, or request, and I'll get back to you as soon as possible.</h1>
+        <strong><h1>Contact me with your inquiry below</h1></strong>
+        <br />
         <form>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" required />

@@ -88,7 +88,7 @@ const NavBar = () => {
           <Box>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Shawaz" src="/src/assets/halo.jpg" />
+                <Avatar alt="Shawaz" src="./src/assets/halo.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

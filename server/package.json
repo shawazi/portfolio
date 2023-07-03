@@ -1,0 +1,12 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Express server",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "express": "latest"
+    }
+  }
+  

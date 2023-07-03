@@ -1,0 +1,34 @@
+body {
+    background-color: #1a2238;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.error-container {
+    text-align: center;
+}
+
+.error-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.error-joke {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ffd700;
+}
+
+.error-image {
+    margin-bottom: 30px;
+}

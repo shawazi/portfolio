@@ -1,0 +1,35 @@
+.card {
+    width: 30rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.card form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.card form input,
+.card form textarea {
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.card form button {
+    padding: 8px 16px;
+    background-color: #68A7AD;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}

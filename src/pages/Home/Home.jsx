@@ -1,12 +1,20 @@
-import React from 'react'
-import NavFoot from '../../components/NavFoot'
+import { useEffect, useState, React } from 'react';
 
 const Home = () => {
+
+  const [items, setItems] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("/api/items")
+  //     .then((res) => res.json())
+  //     .then((data) => setItems(data))
+  // }, []);
+
   return (
-    <>
-      <p>hi</p>
-      <h1>TESTING</h1>
-    </>
+    <main>
+      <h1>Test Data</h1><br/>
+      <p>TESTING</p>
+    </main>
   )
 }
 

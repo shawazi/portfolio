@@ -60,7 +60,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="fixed" sx={{ width: '100%', marginBottom: "15rem" }}>
+    <AppBar position="fixed" sx={{ width: '100%', marginBottom: "13rem" }}>
       <Container disableGutters>
         <Toolbar sx={{ flexGrow: 2, padding: 0 }}>
           <Logo variant="h6" noWrap component="a" href="/">

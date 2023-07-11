@@ -1,13 +1,15 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import React from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const NavFoot = ({ children }) => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar />
-      <main>{children}</main>
-      <Footer />
+      <main style={{ marginTop: "10rem"}}>
+        {children}
+      </main>
+      <Footer style={{ marginBottom: "10rem"}} />
     </div>
   )
 }

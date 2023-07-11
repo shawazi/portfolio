@@ -10,6 +10,14 @@
     text-align: center;
 }
 
+@media (max-width: 488px) {
+    .card {
+      width: 15rem;
+      /* Add mobile-specific styles here */
+    }
+  }
+  
+
 .card form {
     display: flex;
     flex-direction: column;

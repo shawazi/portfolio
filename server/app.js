@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => console.log("Server started"));
 
+app.use(express.static("dist"));
+
 const items = [
     {    
         productName: "Laptop",
@@ -17,6 +19,6 @@ const items = [
     },
 ];
 
-app.get("/api/items", (req, res) => {
+app.get("/api", (req, res) => {
     res.send(items)
 })
